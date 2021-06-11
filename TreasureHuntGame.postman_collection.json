@@ -1,0 +1,70 @@
+{
+	"id": "bbbc9974-a8f8-40ba-8c68-e16e0be0ad06",
+	"name": "TreasureHuntGame",
+	"description": "",
+	"order": [
+		"e7da7c81-6a69-da38-ce6b-25b305479601",
+		"5fe8af57-7b50-ede8-3c02-43ec69ec26e8"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1623444604611,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "5fe8af57-7b50-ede8-3c02-43ec69ec26e8",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8080/input",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "bbbc9974-a8f8-40ba-8c68-e16e0be0ad06",
+			"data": [],
+			"dataMode": "raw",
+			"name": "localhost:8080/input",
+			"description": "localhost:8080/input",
+			"descriptionFormat": "html",
+			"time": 1623444636864,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"user-id\" : \"1\",\n\t\"treasure-map\" : {\n\t\t  \"1\" : [34 , 21 , 32 , 41 ,25],\n\t\t  \"2\" : [14 , 42 , 43 , 14 ,31],\n\t\t  \"3\" : [54 , 45 , 52 , 42,  23  ],\n\t\t  \"4\" : [33 , 15 , 51 , 31 , 35  ],\n\t\t  \"5\" : [21 , 52 , 33 , 13 , 23  ]\n\t\t  \n\t}\n\n}"
+		},
+		{
+			"id": "e7da7c81-6a69-da38-ce6b-25b305479601",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:8080/output/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "bbbc9974-a8f8-40ba-8c68-e16e0be0ad06",
+			"data": null,
+			"dataMode": "params",
+			"name": "TreasureHuntGame",
+			"description": "TreasureHuntGame",
+			"descriptionFormat": "html",
+			"time": 1623444605462,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
