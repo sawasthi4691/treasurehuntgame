@@ -18,6 +18,10 @@ public class InputValidation {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(InputValidation.class);
 
+    /**
+     * Validate input given by the user.
+     * @param gameHunt : gameHunt
+     */
     public void validateInput(final GameHunt gameHunt) {
         LOGGER.info("InputValidation : validateInput :start");
         validateGameBoard(StringUtils.isEmpty(gameHunt.getUserId()), EMPTY_USER);
@@ -75,6 +79,7 @@ public class InputValidation {
     }
 
     /**
+     * Check the size.
      * @param result : result
      * @param invalidRow : invalidRow
      */

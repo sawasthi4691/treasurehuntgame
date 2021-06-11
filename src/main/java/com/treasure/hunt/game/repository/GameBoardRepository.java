@@ -31,6 +31,11 @@ public class GameBoardRepository {
         LOGGER.info("Inside GameBoardRepository : saveBoard : end");
     }
 
+    /**
+     * Fetch the value from Redis DB.
+     * @param uniqueID
+     * @return
+     */
     public GameHuntBoard output(String uniqueID){
         return redisTemplate.opsForValue().get(uniqueID);
     }

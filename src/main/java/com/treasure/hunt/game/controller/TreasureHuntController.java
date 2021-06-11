@@ -3,7 +3,6 @@ package com.treasure.hunt.game.controller;
 import com.treasure.hunt.game.model.GameHunt;
 import com.treasure.hunt.game.model.GameHuntBoard;
 import com.treasure.hunt.game.service.TreasureHuntInputServiceIntf;
-import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,8 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import java.net.URI;
+import java.util.List;
+import java.util.Map;
 
 @RestController
 public class TreasureHuntController {
@@ -39,8 +39,8 @@ public class TreasureHuntController {
     @GetMapping(value = "/output/{id}")
     public ResponseEntity<Object> output(@PathVariable final String id)  {
         LOGGER.info("TreasureHuntController : output  : start");
-        GameHuntBoard gameHuntBoard = treasureHuntInputServiceIntf.output(id);
-        return ResponseEntity.ok(gameHuntBoard);
+        List<String>  outputResult = treasureHuntInputServiceIntf.output(id);
+        return ResponseEntity.ok(outputResult);
     }
 
 }

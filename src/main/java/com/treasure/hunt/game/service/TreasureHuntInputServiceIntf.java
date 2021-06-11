@@ -10,9 +10,10 @@ import static com.treasure.hunt.game.util.ErrorConstant.SIZE;
 
 public interface TreasureHuntInputServiceIntf {
 
-    String takeInput( GameHunt gameHunt);
+    void takeInput( GameHunt gameHunt);
 
-    GameHuntBoard output(String Id);
+    List<String> output(String id);
+
 
     /**
      * Get the GameHuntBoardValue
@@ -34,4 +35,5 @@ public interface TreasureHuntInputServiceIntf {
         gameHuntBoard.setBoard(board);
         return gameHuntBoard;
     }
+
 }
