@@ -12,7 +12,7 @@ public class GameBoardRepository {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(GameBoardRepository.class);
 
-    private RedisTemplate<String, GameHuntBoard> redisTemplate;
+    private final RedisTemplate<String, GameHuntBoard> redisTemplate;
 
     @Autowired
     public GameBoardRepository(RedisTemplate<String, GameHuntBoard> redisTemplate){

@@ -19,8 +19,8 @@ public class TreasureHuntController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(TreasureHuntController.class);
 
-    private TreasureHuntInputServiceIntf treasureHuntInputServiceIntf;
-    private TreasureHuntOutputServiceIntf treasureHuntOutputServiceIntf;
+    private final TreasureHuntInputServiceIntf treasureHuntInputServiceIntf;
+    private final TreasureHuntOutputServiceIntf treasureHuntOutputServiceIntf;
 
     @Autowired
     public TreasureHuntController(TreasureHuntInputServiceIntf treasureHuntInputServiceIntf,TreasureHuntOutputServiceIntf treasureHuntOutputServiceIntf){
@@ -33,7 +33,7 @@ public class TreasureHuntController {
         LOGGER.info("TreasureHuntController : takeInput  : start");
         treasureHuntInputServiceIntf.takeInput(gameHunt);
         LOGGER.info("TreasureHuntController : takeInput  : end");
-        return ResponseEntity.ok(HttpStatus.ACCEPTED);
+        return ResponseEntity.accepted().body(HttpStatus.ACCEPTED);
     }
 
 

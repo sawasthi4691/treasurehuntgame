@@ -14,8 +14,8 @@ public class InputService implements TreasureHuntInputServiceIntf {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(InputService.class);
 
-    private InputValidation inputValidation;
-    private GameBoardRepository gameBoardRepository;
+    private final InputValidation inputValidation;
+    private final GameBoardRepository gameBoardRepository;
 
     @Autowired
     public InputService(InputValidation inputValidation, GameBoardRepository gameBoardRepository) {

@@ -17,7 +17,7 @@ public class OutputService implements  TreasureHuntOutputServiceIntf{
     private static final String TREASURE_FOUND = "Treasure Found!!!";
     private static final String ROW_VISITED = "Row Visited!!!";
 
-    private GameBoardRepository gameBoardRepository;
+    private final GameBoardRepository gameBoardRepository;
 
     @Autowired
     public OutputService(GameBoardRepository gameBoardRepository){
@@ -72,13 +72,13 @@ public class OutputService implements  TreasureHuntOutputServiceIntf{
      * Inner class created.
      * To avoid logic in one place.
      */
-    private class FindTreasure {
+    private static class FindTreasure {
         private boolean found;
-        private List<String> list;
+        private final List<String> list;
         private int currentCellRow;
         private int currentCellCol;
-        private int nextCellCol;
-        private int nextCellRow;
+        private final int nextCellCol;
+        private final int nextCellRow;
 
         public FindTreasure(boolean found, List<String> list, int currentCellRow, int currentCellCol, int nextCellCol, int nextCellRow) {
             this.found = found;
