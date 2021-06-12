@@ -7,8 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Repository;
 
-import java.util.Map;
-
 @Repository
 public class GameBoardRepository {
 
@@ -33,8 +31,8 @@ public class GameBoardRepository {
 
     /**
      * Fetch the value from Redis DB.
-     * @param uniqueID
-     * @return
+     * @param uniqueID :uniqueID
+     * @return : GameHuntBoard
      */
     public GameHuntBoard output(String uniqueID){
         return redisTemplate.opsForValue().get(uniqueID);
