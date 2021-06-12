@@ -18,8 +18,11 @@ import static org.mockito.Mockito.doThrow;
 
 class InputValidationTest {
 
-    @Mock
+    @InjectMocks
     private InputValidation inputValidation;
+
+    @Mock
+    private InputValidation validation;
 
     @Test
     void successTest(){
@@ -34,7 +37,7 @@ class InputValidationTest {
         MockitoAnnotations.openMocks(this);
         GameHunt gameHunt = getGameHunt();
         gameHunt.setUserId(StringUtils.EMPTY);
-        doThrow(ValidationException.class).when(inputValidation).validateInput(gameHunt);
+        doThrow(ValidationException.class).when(validation).validateInput(gameHunt);
     }
 
     @Test
@@ -42,14 +45,14 @@ class InputValidationTest {
         MockitoAnnotations.openMocks(this);
         GameHunt gameHunt = getGameHunt();
         gameHunt.setArrayMap(null);
-        doThrow(ValidationException.class).when(inputValidation).validateInput(gameHunt);
+        doThrow(ValidationException.class).when(validation).validateInput(gameHunt);
     }
 
     @Test
     void isRowNotValidTest(){
         MockitoAnnotations.openMocks(this);
         GameHunt gameHunt = getGameHuntForInValidRow();
-        doThrow(ValidationException.class).when(inputValidation).validateInput(gameHunt);
+        doThrow(ValidationException.class).when(validation).validateInput(gameHunt);
     }
 
 
@@ -57,7 +60,7 @@ class InputValidationTest {
     void isColumnNotValidTest(){
         MockitoAnnotations.openMocks(this);
         GameHunt gameHunt = getGameHuntForInValidColumn();
-        doThrow(ValidationException.class).when(inputValidation).validateInput(gameHunt);
+        doThrow(ValidationException.class).when(validation).validateInput(gameHunt);
     }
 
 
