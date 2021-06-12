@@ -20,7 +20,9 @@ It consists of two APIs
 			}
 		}
 2. Its show the output of the treasure hunt game.
+
 	Rest API url - localhost:8080/output/{userId}
+	
 	PostMan output Sample -
 	[
 	    "11 : Row Visited!!!",
