@@ -12,9 +12,6 @@ public interface TreasureHuntInputServiceIntf {
 
     void takeInput( GameHunt gameHunt);
 
-    List<String> output(String id);
-
-
     /**
      * Get the GameHuntBoardValue
      * @param arrayMap :arrayMap
@@ -35,5 +32,4 @@ public interface TreasureHuntInputServiceIntf {
         gameHuntBoard.setBoard(board);
         return gameHuntBoard;
     }
-
 }
