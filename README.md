@@ -1,4 +1,54 @@
-Technical Coding Exercise 
+About the Project :
+
+It consists of two APIs 
+
+1. It take the inputs and store in redis cache. Input value are as follows:
+		a. User id - ( to uniquely identified the user)
+  		b. Board Game value 5x5 array
+		
+		Rest API url - localhost:8080/input
+		PostMan input Sample -
+		{
+		"user-id" : "15",
+		"treasure-map" : {
+			  "1" : [34 , 21 , 32 , 41 ,25],
+			  "2" : [14 , 42 , 43 , 14 ,31],
+			  "3" : [54 , 45 , 52 , 42,  23  ],
+			  "4" : [33 , 15 , 51 , 31 , 35  ],
+			  "5" : [21 , 52 , 33 , 13 , 23  ]
+
+			}
+		}
+2. Its show the output of the treasure hunt game.
+	Rest API url - localhost:8080/output/{userId}
+	PostMan output Sample -
+	[
+	    "11 : Row Visited!!!",
+	    "34 : Row Visited!!!",
+	    "42 : Row Visited!!!",
+	    "15 : Row Visited!!!",
+	    "25 : Row Visited!!!",
+	    "31 : Row Visited!!!",
+	    "54 : Row Visited!!!",
+	    "13 : Row Visited!!!",
+	    "32 : Row Visited!!!",
+	    "45 : Row Visited!!!",
+	    "35 : Row Visited!!!",
+	    "23 : Row Visited!!!",
+	    "43 : Row Visited!!!",
+	    "51 : Row Visited!!!",
+	    "21 : Row Visited!!!",
+	    "14 : Row Visited!!!",
+	    "41 : Row Visited!!!",
+	    "33 : Row Visited!!!",
+	    "52 : Row Visited!!!",
+	    "52 : Treasure Found!!!"
+	]															
+	
+Before starting the application, we need to start redis server to store the data.Redis zip file is given with project. Just unzip it and run redis-server file.
+
+
+Technical Coding Exercise  - Description
 
 		   +-------------------------+
                   ¦ 34 ¦ 21 ¦ 32 ¦ 41 ¦ 25  ¦
